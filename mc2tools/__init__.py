@@ -3,7 +3,7 @@
 
 :url: https://github.com/HaiYTB/mc2tools
 """
-from _main import main
+from ._main import main
 
 __title__ = "mc2tools"
 __version__ = "1.0.0"
