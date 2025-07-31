@@ -4,6 +4,11 @@ from setuptools import find_packages, setup
 NAME = "mc2tools"
 VERSION = "1.0.0"
 DESCRIPTION = "Minecraft Tool Using Python"
+try:
+    with open("README.md", encoding="utf-8") as f:
+        LONG_DESCRIPTION = f.read()
+except FileNotFoundError:
+    LONG_DESCRIPTION = DESCRIPTION
 AUTHOR = "Henry(Minh Hai) Phan"
 URL = "https://github.com/HaiYTB/mc2tools"
 KEYWORDS = [
@@ -22,18 +27,25 @@ KEYWORDS = [
 ]
 
 # Requirements
-require_packages = []
+try:
+    with open("requirements.txt") as f:
+        require_packages = f.read().splitlines()
+except FileNotFoundError:
+    require_packages = []
 
 
 setup(
     name=NAME,
     version=VERSION,
     description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
     author=AUTHOR,
     author_email="haiwt2xbox@gmail.com",
     url=URL,
     license="Apache License 2.0",
     packages=find_packages(),
+    include_package_data=True,
     install_requires=require_packages,
     entry_points={"console_scripts": ["mc2tools = mc2tools._main:main"]},
     classifiers=[
