@@ -6,7 +6,7 @@
 from ._main import main
 
 __title__ = "mc2tools"
-__version__ = "1.0.0"
+__version__ = "0.0.2"
 __description__ = "Minecraft Tool Using Python"
 
 __author__ = "Henry(Minh Hai) Phan"
