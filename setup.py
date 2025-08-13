@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 # Introduce
 NAME = "mc2tools"
-VERSION = "1.0.0"
+VERSION = "0.0.1"
 DESCRIPTION = "Minecraft Tool Using Python"
 try:
     with open("README.md", encoding="utf-8") as f:
